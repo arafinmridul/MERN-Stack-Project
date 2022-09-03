@@ -2,8 +2,11 @@
   "name": "mern-stack",
   "version": "1.0.0",
   "main": "server.js",
+  "engines": {
+    "node": "16.16.0"
+  },
   "scripts": {
-    "start": "node backend/server.js",
+    "start": "nodemon --exec babel-node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
